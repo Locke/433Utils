@@ -1,7 +1,7 @@
 
 # Defines the RPI variable which is needed by rc-switch/RCSwitch.h
 CXXFLAGS=-DRPI
-LIBS = -lwiringPi
+LIBS = -lwiringPi -l pthread
 
 all: send codesend RFSniffer
 

@@ -38,23 +38,15 @@ int main(int argc, char *argv[]) {
      
     
      while(1) {
-  
-      if (mySwitch.available()) {
-    
-        int value = mySwitch.getReceivedValue();
+        int value = mySwitch.popEvent();
     
         if (value == 0) {
           printf("Unknown encoding\n");
         } else {    
    
-          printf("Received %i\n", mySwitch.getReceivedValue() );
+          printf("Received %i\n", value );
         }
     
-        mySwitch.resetAvailable();
-    
-      }
-      
-  
   }
 
   exit(0);
